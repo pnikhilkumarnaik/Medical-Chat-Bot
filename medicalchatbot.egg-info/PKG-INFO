@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: medicalchatbot
+Version: 0.1.0
+Summary: A medical chatbot using GenAI and LangChain
+Author: P NIKHIL KUMAR NAIK
+Requires-Python: >=3.9
+Requires-Dist: openai<2.0,>=1.40.6
+Requires-Dist: ctransformers<1.0,>=0.2.27
+Requires-Dist: sentence-transformers<4.0,>=3.1.1
+Requires-Dist: langchain<0.3,>=0.2.14
+Requires-Dist: langchain-community>=0.0.200
+Requires-Dist: pinecone<7.0,>=6.0.0
+Requires-Dist: flask<4.0,>=3.0.3
+Requires-Dist: groq
+Requires-Dist: numpy
+Requires-Dist: scikit-learn<2.0,>=1.5.2
+Requires-Dist: tqdm
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
