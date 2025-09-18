@@ -7,7 +7,7 @@ setup(
     description="A medical chatbot using GenAI and LangChain",
     packages=find_packages(),
     install_requires=[
-        "openai>=1.40.6,<2.0",
+        "pypdf>=3.10.0,<4.0",  # Replaces PyMuPDF
         "ctransformers>=0.2.27,<1.0",
         "sentence-transformers>=3.1.1,<4.0",
         "langchain>=0.2.14,<0.3",

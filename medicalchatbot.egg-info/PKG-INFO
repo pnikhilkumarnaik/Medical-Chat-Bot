@@ -4,7 +4,7 @@ Version: 0.1.0
 Summary: A medical chatbot using GenAI and LangChain
 Author: P NIKHIL KUMAR NAIK
 Requires-Python: >=3.9
-Requires-Dist: openai<2.0,>=1.40.6
+Requires-Dist: pypdf<4.0,>=3.10.0
 Requires-Dist: ctransformers<1.0,>=0.2.27
 Requires-Dist: sentence-transformers<4.0,>=3.1.1
 Requires-Dist: langchain<0.3,>=0.2.14

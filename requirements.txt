@@ -1,3 +1,4 @@
+pypdf>=3.10.0,<4.0          # Replaces PyMuPDF
 # Core AI / ML
 torch>=2.2.2,<3.0               # Install separately if needed for CPU/GPU
 transformers>=4.42.2,<5.0
