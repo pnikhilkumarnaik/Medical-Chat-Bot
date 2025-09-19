@@ -15,7 +15,7 @@ setup(
         "pinecone>=6.0.0,<7.0",
         "flask>=3.0.3,<4.0",
         "groq",                    # Groq SDK
-        "numpy",
+        "numpy>=1.26,<3.0",
         "scikit-learn>=1.5.2,<2.0",
         "tqdm",
     ],
