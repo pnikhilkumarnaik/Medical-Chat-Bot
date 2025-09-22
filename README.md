@@ -54,6 +54,33 @@ cd Medical-Chat-Bot
    PINECONE_API_KEY
    PINECONE_INDEX_NAME
    ```
+## Usage
+
+### 1. Prepare Your Documents
+- Split your documents into smaller chunks to make embedding generation more efficient.
+
+---
+
+### 2. Initialize Embeddings
+- Set up a text embedding model to convert document chunks into vector representations.
+
+---
+
+### 3. Connect to Pinecone
+- Initialize the Pinecone client using your API key and environment.
+- Connect to the existing index or create a new one for storing vectors.
+
+---
+
+### 4. Store Embeddings in Pinecone
+- Add the vectorized document chunks to the Pinecone index for fast similarity search.
+
+---
+
+### 5. Ask Questions with the LLM
+- Initialize the Groq LLM or another language model.
+- Set up a retrieval-based question-answering system that queries the Pinecone index.
+- Input your question to get answers along with optional source documents.
 
 
 
