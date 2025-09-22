@@ -7,5 +7,5 @@ medicalchatbot.egg-info/requires.txt
 medicalchatbot.egg-info/top_level.txt
 src/__init__.py
 src/helper.py
-src/promte.py
+src/prompt.py
 src/MedicalChatBot/__init__.py

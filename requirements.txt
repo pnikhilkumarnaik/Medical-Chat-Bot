@@ -1,60 +1,44 @@
-
-# Core ML & embeddings
-torch
-transformers
-sentence-transformers
-
-# Vector database
-pinecone-client
-pinecone
-
-# LLMs
-groq
-langchain
-langchain-community
-langchain_huggingface
-langchain_pinecone
-
-# Utilities
-pypdf   # for reading PDFs
-tqdm    # progress bar
-scikit-learn   # used by sentence-transformers
-dotenv   # for loading environment variables
-
-
-
-pypdf>=3.10.0,<4.0          # Replaces PyMuPDF
-# Core AI / ML
-torch>=2.2.2,<3.0               # Install separately if needed for CPU/GPU
+# -------------------------------
+# Core AI / ML & Embeddings
+# -------------------------------
+torch>=2.2.2,<3.0
 transformers>=4.42.2,<5.0
 sentence-transformers>=3.1.1,<4.0
+ctransformers>=0.2.27,<1.0  # For local LLM inference 
 
-# LLM Inference
-ctransformers>=0.2.27,<1.0       # Replaces llama-cpp-python
-
+# -------------------------------
 # Vector Database
-pinecone>=6.0.0,<7.0
+# -------------------------------
+#pinecone>=6.0.0,<7.0
+pinecone
+#pinecone-client>=6.0.0,<7.0
+langchain-pinecone==0.1.3
 
-# LangChain (chaining, memory, retrieval)
+
+
+# -------------------------------
+# LLMs & LangChain
+# -------------------------------
+groq
 langchain>=0.2.14,<0.3
 langchain-community>=0.0.200
+langchain_huggingface
 
-# Web Framework
-flask>=3.0.3,<4.0
-
-
-
-# OpenAI API
-#openai>=1.40.6,<2.0
-
-# Groq SDK
-groq
-
-# Extras
+# -------------------------------
+# PDF & File Utilities
+# -------------------------------
+pypdf>=3.10.0,<4.0
 tqdm
-numpy
+numpy>=1.26,<3.0
 scikit-learn>=1.5.2,<2.0
 python-dotenv
 
-# Local package installation
+# -------------------------------
+# Web Framework
+# -------------------------------
+flask>=3.0.3,<4.0
+
+# -------------------------------
+# Local Package
+# -------------------------------
 -e .
