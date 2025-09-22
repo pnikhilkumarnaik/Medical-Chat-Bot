@@ -2,3 +2,5 @@
 env/
 .env
 temp-repo
+medicalchatbot.egg-info/
+__pycache__/
