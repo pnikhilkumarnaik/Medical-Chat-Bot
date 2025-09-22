@@ -45,14 +45,15 @@ cd Medical-Chat-Bot
    python -m venv env
    source env\Scripts\activate         
 
-```bash
    pip install -r requirements.txt
 
 ```
 3. Create a .env file for your API keys:
+```
    GROQ_API_KEY
    PINECONE_API_KEY
    PINECONE_INDEX_NAME
+   ```
 
 
 
