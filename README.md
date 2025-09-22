@@ -1,4 +1,4 @@
-# Medical Chat Bot using Llama2
+# Medical Chat Bot using GROQ
  
 ## stept to run the project
  '''Bash 
