@@ -1,17 +1,3 @@
 # Python environment
 env/
 .env
-
-# Python cache files
-*.pyc
-__pycache__/
-
-# Flask secret keys or environment variables
-# (already covered by .env)
-
-# Packaging
-*.egg-info/
-
-# IDE/editor files
-.vscode/
-.idea/
