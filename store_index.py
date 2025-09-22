@@ -1,8 +1,8 @@
 import os
 from dotenv import load_dotenv
 from src.helper import load_pdf, text_split, download_hugging_face_embedding
-from langchain_community.vectorstores import Pinecone as PineconeVectorStore
 from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.vectorstores import Pinecone as PineconeVectorStore
 from pinecone import Pinecone
 import pinecone
 

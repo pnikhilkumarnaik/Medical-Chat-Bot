@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Bot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="chatBot">
+    <header>
+      <img src="https://imgs.search.brave.com/4Dw_QuNqYHBoWFKwoMR3nC_SEE52KwIwcfX8-y_KfIE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/ZnJlZXBuZ2xvZ29z/LmNvbS91cGxvYWRz/L21lZGljYWwtbG9n/by1wbmctNy5wbmc" 
+           alt="Doctor Logo" class="header-logo">
+      Medical Bot
+    </header>
+
+    <ul class="chatbox" id="chatbox">
+      <!-- Messages will appear here -->
+    </ul>
+
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Type your message..." autocomplete="off"/>
+      <button id="sendBtn">&#10148;</button>
+    </div>
+  </div>
+
+<script>
+const chatbox = document.getElementById('chatbox');
+const userInput = document.getElementById('userInput');
+const sendBtn = document.getElementById('sendBtn');
+
+const botAvatar = "https://imgs.search.brave.com/-8WRbUeec3h5BE9odDKCtNIqIEvixeVLCDXPYTkDxxU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS12ZWN0b3Iv/Z3JhaWRlbnQtYWkt/cm9ib3QtdmVjdG9y/YXJ0Xzc4MzcwLTQx/MTQuanBnP3NlbXQ9/YWlzX2luY29taW5n/Jnc9NzQwJnE9ODA"; 
+const userAvatar = "https://imgs.search.brave.com/knb-oOi3aJZmKBtwrjrlTsgZzLJnOJCnApMTYQRmHq8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzI5L2Ew/LzQyLzI5YTA0MjZi/MzdhMjM4MzA0NDRl/ZDliN2NmYThhNmY0/LmpwZw"; 
+
+function addMessage(text, type, isTyping=false) {
+  const li = document.createElement('li');
+  li.className = type;
+
+  const img = document.createElement('img');
+  img.src = type === 'chat-incoming' ? botAvatar : userAvatar;
+  img.className = "avatar";
+
+  const p = document.createElement('p');
+
+  if(isTyping) {
+    p.classList.add('typing');
+    for(let i=0; i<3; i++){
+      const dot = document.createElement('span');
+      dot.textContent = '.';
+      p.appendChild(dot);
+    }
+  } else {
+    p.textContent = text;
+  }
+
+  li.appendChild(img);
+  li.appendChild(p);
+  chatbox.appendChild(li);
+  chatbox.scrollTop = chatbox.scrollHeight;
+
+  return li;
+}
+
+async function sendMessage() {
+  const message = userInput.value.trim();
+  if (!message) return;
+
+  addMessage(message, 'chat-outgoing');
+  userInput.value = '';
+
+  const typingElement = addMessage('', 'chat-incoming', true);
+
+  try {
+    const response = await fetch('/get', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({message})
+    });
+
+    const data = await response.json();
+
+    typingElement.remove();
+    if(data.response) {
+      addMessage(data.response, 'chat-incoming');
+    } else if(data.error) {
+      addMessage("Error: " + data.error, 'chat-incoming');
+    }
+
+  } catch (err) {
+    typingElement.remove();
+    addMessage("Error: Could not get response from server.", 'chat-incoming');
+  }
+}
+
+// Event listeners
+sendBtn.addEventListener('click', sendMessage);
+userInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    sendMessage();
+  }
+});
+
+// ✅ Add initial bot message on page load
+window.addEventListener('DOMContentLoaded', () => {
+  addMessage("Hello! How can I help you today?", 'chat-incoming');
+});
+</script>
+</body>
+</html>

@@ -24,7 +24,7 @@ setup(
         # --- LLMs & LangChain ---
         "groq",
         "langchain>=0.2.14,<0.3",
-        "langchain-community>=0.0.200",
+        "langchain-community>=0.0.200,<0.3",
         "langchain-huggingface",
 
         # --- PDF & File Utilities ---
