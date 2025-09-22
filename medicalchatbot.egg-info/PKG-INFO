@@ -12,7 +12,11 @@ Requires-Dist: langchain-community>=0.0.200
 Requires-Dist: pinecone<7.0,>=6.0.0
 Requires-Dist: flask<4.0,>=3.0.3
 Requires-Dist: groq
+<<<<<<< HEAD
 Requires-Dist: numpy<3.0,>=1.26
+=======
+Requires-Dist: numpy
+>>>>>>> 6eaed58a2d2daf2afe61a3e19435ab76b80d8f72
 Requires-Dist: scikit-learn<2.0,>=1.5.2
 Requires-Dist: tqdm
 Dynamic: author

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Core ML & embeddings
 torch
 transformers
@@ -19,3 +20,37 @@ pypdf   # for reading PDFs
 tqdm    # progress bar
 scikit-learn   # used by sentence-transformers
 dotenv   # for loading environment variables
+=======
+pypdf>=3.10.0,<4.0          # Replaces PyMuPDF
+# Core AI / ML
+torch>=2.2.2,<3.0               # Install separately if needed for CPU/GPU
+transformers>=4.42.2,<5.0
+sentence-transformers>=3.1.1,<4.0
+
+# LLM Inference
+ctransformers>=0.2.27,<1.0       # Replaces llama-cpp-python
+
+# Vector Database
+pinecone>=6.0.0,<7.0
+
+# LangChain (chaining, memory, retrieval)
+langchain>=0.2.14,<0.3
+langchain-community>=0.0.200
+
+# Web Framework
+flask>=3.0.3,<4.0
+
+# Extras
+tqdm
+numpy
+scikit-learn>=1.5.2,<2.0
+
+# OpenAI API
+#openai>=1.40.6,<2.0
+
+# Groq SDK
+groq
+
+# Local package installation
+-e .
+>>>>>>> 6eaed58a2d2daf2afe61a3e19435ab76b80d8f72
