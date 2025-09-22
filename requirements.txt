@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Core ML & embeddings
 torch
 transformers
@@ -20,7 +20,9 @@ pypdf   # for reading PDFs
 tqdm    # progress bar
 scikit-learn   # used by sentence-transformers
 dotenv   # for loading environment variables
-=======
+
+
+
 pypdf>=3.10.0,<4.0          # Replaces PyMuPDF
 # Core AI / ML
 torch>=2.2.2,<3.0               # Install separately if needed for CPU/GPU
@@ -40,16 +42,19 @@ langchain-community>=0.0.200
 # Web Framework
 flask>=3.0.3,<4.0
 
-# Extras
-tqdm
-numpy
-scikit-learn>=1.5.2,<2.0
+
 
 # OpenAI API
 #openai>=1.40.6,<2.0
 
 # Groq SDK
 groq
+
+# Extras
+tqdm
+numpy
+scikit-learn>=1.5.2,<2.0
+python-dotenv
 
 # Local package installation
 -e .
