@@ -28,32 +28,53 @@ A conversational AI assistant designed to answer medical-related queries. This p
 
 ---
 
+
 ## Installation
 
-1. Clone the repository:
-
+### 1. Clone the Repository
+- Download the project to your local machine using Git.
 ```bash
-git clone 
+git clone https://github.com/username/Medical-Chat-Bot.git
+
 cd Medical-Chat-Bot
-
 ```
 
+---
 
-2. Create a virtual environment and activate it:
-
-```bash
-   python -m venv env
-   source env\Scripts\activate         
-
-   pip install -r requirements.txt
-
+### 2. Set Up a Virtual Environment
+- Create and activate a Python virtual environment to manage dependencies.
 ```
-3. Create a .env file for your API keys:
+python -m venv env #Create Environment
+
+source env\Scripts\activate   #Activate Environment
 ```
-   GROQ_API_KEY
-   PINECONE_API_KEY
-   PINECONE_INDEX_NAME
-   ```
+ 
+---
+
+### 3. Install Required Packages
+- Install all necessary Python packages listed in `requirements.txt` to ensure the project runs smoothly.
+```
+ pip install --upgrade pip
+ pip install -r requirements.txt
+```
+---
+
+### 4. Configure Environment Variables
+- Create a `.env` file in the project root.
+- Add your API keys for Pinecone, Groq, and any other services the project uses.
+```
+  
+PINECONE_API_KEY=*****
+PINECONE_INDEX_NAME=****
+GROQ_API_KEY=****
+```
+---
+
+### 5. Verify Installation
+- Make sure all dependencies are installed correctly.
+- Check that the environment variables are accessible from your Python scripts.
+
+---
 ## Usage
 
 ### 1. Prepare Your Documents
