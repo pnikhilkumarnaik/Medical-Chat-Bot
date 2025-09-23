@@ -43,9 +43,8 @@ cd Medical-Chat-Bot
 
 ### 2. Set Up a Virtual Environment
 - Create and activate a Python virtual environment to manage dependencies.
-```
+```bash
 python -m venv env #Create Environment
-
 source env\Scripts\activate   #Activate Environment
 ```
  
@@ -53,7 +52,7 @@ source env\Scripts\activate   #Activate Environment
 
 ### 3. Install Required Packages
 - Install all necessary Python packages listed in `requirements.txt` to ensure the project runs smoothly.
-```
+```bash
  pip install --upgrade pip
  pip install -r requirements.txt
 ```
@@ -102,6 +101,43 @@ GROQ_API_KEY=****
 - Initialize the Groq LLM or another language model.
 - Set up a retrieval-based question-answering system that queries the Pinecone index.
 - Input your question to get answers along with optional source documents.
+
+##🩺 User Interface for Medical Chatbot
+
+This is the **User Interface (UI)** for the Medical Chatbot project.  
+It allows users to ask medical-related questions and get answers through a clean and simple chat interface.
+
+### 🚀 Features
+- Simple and user-friendly design  
+- Chat-style interface with user and bot messages  
+- Responsive layout  
+
+### 🛠️ Technologies Used
+- **HTML** – Structure of the web page  
+- **CSS** – Styling and layout  
+- **JavaScript** – Handling user input and API requests  
+
+### ⚙️ Setup
+1. Clone this repository  
+   ```bash
+   git clone https://github.com/<your-username>/Medical-Chat-Bot.git
+   cd Medical-Chat-Bot
+   ```
+2. Run the app file -- to open the home.html page
+```bash
+   python app.py
+```
+3. Access the web page at:
+   ```
+   http://127.0.0.1:8080
+   ```
+
+
+
+
+
+
+
 
 
 
