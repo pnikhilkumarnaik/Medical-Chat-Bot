@@ -3,3 +3,4 @@ env/
 .env
 
 medicalchatbot.egg-info/
+*.egg-info/
