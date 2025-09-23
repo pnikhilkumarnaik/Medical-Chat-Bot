@@ -4,6 +4,14 @@ A conversational AI assistant designed to answer medical-related queries. This p
 
 ---
 
+
+
+
+<img width="1555" height="1000" alt="screenshot" src="https://github.com/user-attachments/assets/c25d0c3a-bb62-4548-b6f0-a24241cc7bab" />
+
+
+
+
 ## Features
 
 - **Document ingestion**: Load PDFs, text, and other medical documents.
