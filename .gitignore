@@ -1,6 +1,8 @@
 # Python environment
 env/
 .env
+bot/
+.bot
 
 medicalchatbot.egg-info/
 *.egg-info/

@@ -35,11 +35,8 @@ docsearch = PineconeVectorStore.from_existing_index(index_name=index_name,
 PROMPT=PromptTemplate(template=prompt_template,input_variables=["context","question"])
 chain_type_kwargs={"prompt":PROMPT}
 
-llm = ChatGroq(
-    model="llama-3.3-70b-versatile",
-    api_key=GROQ_API_KEY,
-    temperature=0.8
-)
+llm = ChatGroq(model="llama-3.3-70b-versatile",  
+       api_key=GROQ_API_KEY, temperature=0.8 )
 
 
 qa=RetrievalQA.from_chain_type(
